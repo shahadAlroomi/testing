@@ -1,19 +1,25 @@
 ﻿namespace Greeter.Tests;
 
-public class HelloWorlsTests
+public class HelloWorldTests
 {
-    [Fact]
-    public void GetGreetingReturHelloWorld()
+    [Theory]
+    [InlineData("shahad", "Hej", "shahad,Hej")]
+    [InlineData("shahad", "Hello", "shahad,Hello")]
+    [InlineData("shahad", "Hola", "shahad,Hola")]
+    public void GetGreetingReturHelloWorld( string name, string language ,string expected)
     {
         //Arrnge 
 
+
+
+
        
-            string expected = "Hello,World";
+            //string expected = "shahad,Hola";
 
 
         //Act 
 
-        string actual = Program.GetGreeting();
+        string actual = Program.GetGreeting(name, language);
 
         //Assert 
 
