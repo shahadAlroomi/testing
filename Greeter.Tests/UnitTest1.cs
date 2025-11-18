@@ -6,12 +6,14 @@ public class HelloWorlsTests
     public void GetGreetingReturHelloWorld()
     {
         //Arrnge 
-        
-        string expected= "Hello,Shahad!";
+
+       
+            string expected = "Hello,World";
+
 
         //Act 
 
-        string actual = Program.GetGreeting("Shahad");
+        string actual = Program.GetGreeting("");
 
         //Assert 
 
