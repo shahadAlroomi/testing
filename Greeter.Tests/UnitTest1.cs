@@ -13,7 +13,7 @@ public class HelloWorlsTests
 
         //Act 
 
-        string actual = Program.GetGreeting("");
+        string actual = Program.GetGreeting();
 
         //Assert 
 
