@@ -6,9 +6,10 @@ public class Program
     {
         
     }
+    const string EnglishGreeting ="Hello,";
     
     public static string GetGreeting(string name)
     {
-        return"Hello,"+ name + "!";
+        return EnglishGreeting + name + "!";
     }
 }
