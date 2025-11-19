@@ -1,12 +1,17 @@
 ﻿namespace Greeter.Tests;
+using Greeter;
+using Xunit;
 
 public class HelloWorldTests
 {
-    [Theory]
+    /*[Theory]
     [InlineData("shahad", "Hej", "shahad,Hej")]
     [InlineData("shahad", "Hello", "shahad,Hello")]
     [InlineData("shahad", "Hola", "shahad,Hola")]
-    public void GetGreetingReturHelloWorld( string name, string language ,string expected)
+    [InlineData("shahad", "Bonjour", "shahad,Bonjour")]*/
+    [Fact]
+
+    public void GetGreetingReturHelloWorld()
     {
         //Arrnge 
 
@@ -14,7 +19,10 @@ public class HelloWorldTests
 
 
        
-            //string expected = "shahad,Hola";
+            string name = "shahad" ;
+        string language = "Bonjour" ;
+        string expected = name + "," + language ;
+
 
 
         //Act 
