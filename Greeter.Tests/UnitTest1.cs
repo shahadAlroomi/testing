@@ -4,30 +4,37 @@ using Xunit;
 
 public class HelloWorldTests
 {
-    /*[Theory]
-    [InlineData("shahad", "Hej", "shahad,Hej")]
-    [InlineData("shahad", "Hello", "shahad,Hello")]
-    [InlineData("shahad", "Hola", "shahad,Hola")]
-    [InlineData("shahad", "Bonjour", "shahad,Bonjour")]*/
     [Fact]
-
-    public void GetGreetingReturHelloWorld()
+    public void GetGreeting_Retrun_H()
     {
         //Arrnge 
 
-
-
-
-       
-            string name = "shahad" ;
-        string language = "Bonjour" ;
-        string expected = name + "," + language ;
+        string expected = "Hello,World!";
 
 
 
         //Act 
 
-        string actual = Program.GetGreeting(name, language);
+        string actual = Program.GetGreeting();
+
+        //Assert 
+
+        Assert.Equal(expected,actual);
+
+        
+    }
+    [Theory]
+    [InlineData("spanish", "Hola,shahad!")]
+    [InlineData("french", "Bonjour,shahad!")]
+    
+
+    public void GetGreetingReturHelloWorld(string language , string expected)
+    {
+       
+
+        //Act 
+
+        string actual = Program.GetGreeting("shahad", language);
 
         //Assert 
 
